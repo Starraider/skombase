@@ -2,8 +2,8 @@
 #### DEPENDENCIES ####
 ######################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:customer_sitepackage/Configuration/TypoScript/Extension/Form/setup.typoscript" condition="extension.isLoaded('form') == 1">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:customer_sitepackage/Configuration/TypoScript/Extension/News/setup.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:skombase/Configuration/TypoScript/Extension/Form/setup.typoscript" condition="extension.isLoaded('form') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:skombase/Configuration/TypoScript/Extension/News/setup.typoscript">
 
 
 
@@ -70,16 +70,16 @@ config {
 #### overwrite content_animations layout ####
 #############################################
 lib.contentElement {
-  layoutRootPaths.0 = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
-  layoutRootPaths.100 = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+  layoutRootPaths.0 = EXT:skombase/Resources/Private/Layouts/ContentElements/
+  layoutRootPaths.100 = EXT:skombase/Resources/Private/Layouts/ContentElements/
 }
 tt_content {
-  container_1_columns.layoutRootPaths.100. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
-  container_2_columns.layoutRootPaths.100. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
-  container_2_columns_right.layoutRootPaths.100. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
-  container_2_columns_left.layoutRootPaths.100. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
-  container_3_columns.layoutRootPaths.100. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
-  container_4_columns.layoutRootPaths.100. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+  container_1_columns.layoutRootPaths.100. = EXT:skombase/Resources/Private/Layouts/ContentElements/
+  container_2_columns.layoutRootPaths.100. = EXT:skombase/Resources/Private/Layouts/ContentElements/
+  container_2_columns_right.layoutRootPaths.100. = EXT:skombase/Resources/Private/Layouts/ContentElements/
+  container_2_columns_left.layoutRootPaths.100. = EXT:skombase/Resources/Private/Layouts/ContentElements/
+  container_3_columns.layoutRootPaths.100. = EXT:skombase/Resources/Private/Layouts/ContentElements/
+  container_4_columns.layoutRootPaths.100. = EXT:skombase/Resources/Private/Layouts/ContentElements/
 }
 ################
 #### Encore ####
