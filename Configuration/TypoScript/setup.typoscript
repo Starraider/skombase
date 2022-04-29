@@ -130,6 +130,6 @@ page {
   }
 
   includeJSFooter {
-    customer_sitepackage_scripts >
+    skombase_scripts >
   }
 }

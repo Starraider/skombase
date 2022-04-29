@@ -21,8 +21,8 @@ page {
     fileInverted = EXT:skombase/Resources/Public/Images/logo-inverted.svg
     height = 52
     width = 192
-    alt = Customer Sitepackage
-    linktitle = Customer Sitepackage
+    alt = Base Sitepackage
+    linktitle = Base Sitepackage
   }
   favicon {
     file = EXT:skombase/Resources/Public/Icons/favicon.ico

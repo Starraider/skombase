@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Extension Manager/Repository config file for ext "customer_sitepackage".
+ * Extension Manager/Repository config file for ext "skombase".
  */
 $EM_CONF[$_EXTKEY] = [
     'title' => 'SKom Base Sitepackage',

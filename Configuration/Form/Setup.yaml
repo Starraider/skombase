@@ -4,7 +4,7 @@ TYPO3:
             persistenceManager:
                 allowedExtensionPaths:
                     110: null
-                    210: EXT:customer_sitepackage/Resources/Private/Forms/
+                    210: EXT:skombase/Resources/Private/Forms/
             prototypes:
                 standard:
                     formElementsDefinition:
@@ -12,13 +12,13 @@ TYPO3:
                             renderingOptions:
                                 translation:
                                     translationFiles:
-                                        210: 'EXT:customer_sitepackage/Resources/Private/Language/Form/locallang.xlf'
+                                        210: 'EXT:skombase/Resources/Private/Language/Form/locallang.xlf'
                                 layoutRootPaths:
-                                    30: 'EXT:customer_sitepackage/Resources/Private/Layouts/Form/'
+                                    30: 'EXT:skombase/Resources/Private/Layouts/Form/'
                                 templateRootPaths:
-                                    30: 'EXT:customer_sitepackage/Resources/Private/Templates/Form/'
+                                    30: 'EXT:skombase/Resources/Private/Templates/Form/'
                                 partialRootPaths:
-                                    30: 'EXT:customer_sitepackage/Resources/Private/Partials/Form/'
+                                    30: 'EXT:skombase/Resources/Private/Partials/Form/'
                         ImageUpload:
                             properties:
                                 imageLinkMaxWidth: 1200
