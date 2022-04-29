@@ -31,13 +31,13 @@ Basic TYPO3 sitepackage based on bootstrap_package.
 
 ## Dependency:
 
-- typo3: ^9.5.25 or ^10.4.14
-- [bk2k/bootstrap-package](https://extensions.typo3.org/extension/bootstrap_package): ^11.0.3
+- typo3: ^11.5
+- [bk2k/bootstrap-package](https://extensions.typo3.org/extension/bootstrap_package): ^12.0
 
 ## Supported extensions
 
-- [georgringer/news](https://extensions.typo3.org/extension/news): ^7.3
-- [t3/min](https://extensions.typo3.org/extension/min): ^1.8
+- [georgringer/news](https://extensions.typo3.org/extension/news): ^9.4
+- [t3/min](https://extensions.typo3.org/extension/min): ^2.0
 
 Developed 2022 by Sven Kalbhenn
 
