@@ -1,0 +1,21 @@
+//
+// 2 Columns 66/33
+// --------------------------------------------------
+@include media-breakpoint-up('lg') {
+    .backendlayout-2Columns6633 {
+        .maincontent-wrap {
+            width: calc(100% / 12 * 7);
+        }
+        .subcontent-wrap {
+            width: calc(100% / 12 * 5);
+        }
+    }
+    .backendlayout-2Columns6633 {
+        .maincontent-wrap {
+            order: 1;
+        }
+        .subcontent-wrap {
+            order: 2;
+        }
+    }
+}
