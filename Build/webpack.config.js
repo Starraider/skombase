@@ -12,7 +12,7 @@ Encore
   .setPublicPath('/typo3conf/ext/skombase/Resources/Public/')
 
   // only needed for CDN's or sub-directory deploy
-  // .setManifestKeyPrefix('build/')
+  .setManifestKeyPrefix('../Resources/Public/')
 
   .configureFontRule({
     type: 'asset',
@@ -65,8 +65,6 @@ Encore
    * and one CSS file (e.g. app.css) if you JavaScript imports CSS.
    */
   .addEntry('app', './js/app.js')
-  .addEntry('head', './js/head.js')
-  .addEntry('config', './js/config.js')
 
   // will require an extra script tag for runtime.js
   // but, you probably want this, unless you're building a single-page app
