@@ -46,26 +46,29 @@ renderables:
                               lg: { numbersOfColumnsToUse: '6' }
                   renderables:
                       - type: Text
-                        identifier: fullname
-                        label: 'Full name and surname'
+                        identifier: firstname
+                        label: 'First name'
                         properties:
                             fluidAdditionalAttributes:
-                                placeholder: 'Full name and surname'
+                                placeholder: 'First name'
                                 required: required
                         validators:
                             - { identifier: NotEmpty }
                       - type: Text
-                        identifier: company
-                        label: 'Company'
+                        identifier: lastname
+                        label: 'Last name'
                         properties:
                             fluidAdditionalAttributes:
-                                placeholder: 'Company'
+                                placeholder: 'Last name'
+                                required: required
+                        validators:
+                            - { identifier: NotEmpty }
                       - type: Text
                         identifier: email
-                        label: 'Email'
+                        label: 'E-mail'
                         properties:
                             fluidAdditionalAttributes:
-                                placeholder: 'Email'
+                                placeholder: 'E-mail'
                                 required: required
                         validators:
                             - { identifier: NotEmpty }
