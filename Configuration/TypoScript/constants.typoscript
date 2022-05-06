@@ -15,6 +15,11 @@
 page {
   theme {
     cookieconsent.enable = 0
+    copyright.text = &copy; 2022 Sven Kalbhenn
+    navigation {
+      style = default
+      type = top
+    }
   }
   logo {
     file = EXT:skombase/Resources/Public/Images/logo.svg
@@ -40,6 +45,9 @@ page {
 ##################
 plugin {
   bootstrap_package {
+    settings{
+      overrideParserVariables = 0
+    }
     view {
       layoutRootPath = EXT:skombase/Resources/Private/Layouts/
       partialRootPath = EXT:skombase/Resources/Private/Partials/
