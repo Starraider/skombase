@@ -27,6 +27,11 @@
 .language-menu-item {
     padding-top: 6px;
 }
+/* navbar */
+.navbar-default {
+    background-color: $white !important;
+    --bs-bg-opacity: 1;
+}
 
 
 /* SVG Waves */
