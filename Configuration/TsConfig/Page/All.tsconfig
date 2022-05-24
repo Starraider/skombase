@@ -1,8 +1,8 @@
 #
-# PageTS for Customer Sitepackage
+# PageTS for SKom Base Sitepackage
 #
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:customer_sitepackage/Configuration/TsConfig/Page/RTE.tsconfig">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:customer_sitepackage/Configuration/TsConfig/Page/TCEFORM.tsconfig">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:customer_sitepackage/Configuration/TsConfig/Page/TCEMAIN.tsconfig">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:customer_sitepackage/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:customer_sitepackage/Configuration/TsConfig/Page/Extensions/News/News.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:skombase/Configuration/TsConfig/Page/RTE.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:skombase/Configuration/TsConfig/Page/TCEFORM.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:skombase/Configuration/TsConfig/Page/TCEMAIN.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:skombase/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:skombase/Configuration/TsConfig/Page/Extensions/News/News.tsconfig">

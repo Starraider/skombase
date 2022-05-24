@@ -12,6 +12,7 @@ editor:
             - { name: 'wie h2', element: 'div', attributes: { 'class': 'h2' } }
             - { name: 'wie h3', element: 'div', attributes: { 'class': 'h3' } }
             - { name: 'wie h4', element: 'div', attributes: { 'class': 'h4' } }
+            - { name: 'Key', element: 'kbd', attributes: { 'class': 'kbd' } }
         extraPlugins:
             - find
             - wordcount

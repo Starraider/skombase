@@ -2,8 +2,8 @@
 #### DEPENDENCIES ####
 ######################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/constants.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:customer_sitepackage/Configuration/TypoScript/Extension/Form/constants.typoscript" condition="extension.isLoaded('form') == 1">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:customer_sitepackage/Configuration/TypoScript/Extension/News/constants.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:skombase/Configuration/TypoScript/Extension/Form/constants.typoscript" condition="extension.isLoaded('form') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:skombase/Configuration/TypoScript/Extension/News/constants.typoscript">
 ##############################
 #### DEVELOPMENT SETTINGS ####
 ##############################
@@ -14,23 +14,29 @@
 ############
 page {
   theme {
+    googleFont.enable = 0
     cookieconsent.enable = 0
+    copyright.text = &copy; 2022 Sven Kalbhenn
+    navigation {
+      style = default
+      type = top
+    }
   }
   logo {
-    file = EXT:customer_sitepackage/Resources/Public/Images/logo.svg
-    fileInverted = EXT:customer_sitepackage/Resources/Public/Images/logo-inverted.svg
+    file = EXT:skombase/Resources/Public/Images/logo.svg
+    fileInverted = EXT:skombase/Resources/Public/Images/logo-inverted.svg
     height = 52
     width = 192
-    alt = Customer Sitepackage
-    linktitle = Customer Sitepackage
+    alt = Base Sitepackage
+    linktitle = Base Sitepackage
   }
   favicon {
-    file = EXT:customer_sitepackage/Resources/Public/Icons/favicon.ico
+    file = EXT:skombase/Resources/Public/Icons/favicon.ico
   }
   fluidtemplate {
-    layoutRootPath = EXT:customer_sitepackage/Resources/Private/Layouts/Page/
-    partialRootPath = EXT:customer_sitepackage/Resources/Private/Partials/Page/
-    templateRootPath = EXT:customer_sitepackage/Resources/Private/Templates/Page/
+    layoutRootPath = EXT:skombase/Resources/Private/Layouts/Page/
+    partialRootPath = EXT:skombase/Resources/Private/Partials/Page/
+    templateRootPath = EXT:skombase/Resources/Private/Templates/Page/
   }
 }
 
@@ -40,17 +46,13 @@ page {
 ##################
 plugin {
   bootstrap_package {
-    view {
-      layoutRootPath = EXT:customer_sitepackage/Resources/Private/Layouts/
-      partialRootPath = EXT:customer_sitepackage/Resources/Private/Partials/
-      templateRootPath = EXT:customer_sitepackage/Resources/Private/Templates/
+    settings{
+      overrideParserVariables = 0
     }
-    ################################
-    ### BOOTSTRAP SCSS CONSTANTS ###
-    ################################
-    settings.scss {
-      primary = #eb3e4a
-      secondary = #013859
+    view {
+      layoutRootPath = EXT:skombase/Resources/Private/Layouts/
+      partialRootPath = EXT:skombase/Resources/Private/Partials/
+      templateRootPath = EXT:skombase/Resources/Private/Templates/
     }
   }
 
@@ -59,9 +61,9 @@ plugin {
   ########################
   bootstrap_package_contentelements {
     view {
-      layoutRootPath = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
-      partialRootPath = EXT:customer_sitepackage/Resources/Private/Partials/ContentElements/
-      templateRootPath = EXT:customer_sitepackage/Resources/Private/Templates/ContentElements/
+      layoutRootPath = EXT:skombase/Resources/Private/Layouts/ContentElements/
+      partialRootPath = EXT:skombase/Resources/Private/Partials/ContentElements/
+      templateRootPath = EXT:skombase/Resources/Private/Templates/ContentElements/
     }
   }
 }

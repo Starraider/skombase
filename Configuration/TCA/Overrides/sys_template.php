@@ -5,14 +5,14 @@ call_user_func(function()
     /**
      * Temporary variables
      */
-    $extensionKey = 'customer_sitepackage';
+    $extensionKey = 'skombase';
 
     /**
-     * Default TypoScript for CustomerSitepackage
+     * Default TypoScript for skombase
      */
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
         $extensionKey,
         'Configuration/TypoScript',
-        'Customer Sitepackage'
+        'SKom Base Sitepackage'
     );
 });

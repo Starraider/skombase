@@ -3,6 +3,6 @@
 #############
 RTE {
     default {
-        preset = customer_sitepackage
+        preset = skombase
     }
 }

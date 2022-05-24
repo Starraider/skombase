@@ -2,8 +2,8 @@
 #### DEPENDENCIES ####
 ######################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:customer_sitepackage/Configuration/TypoScript/Extension/Form/setup.typoscript" condition="extension.isLoaded('form') == 1">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:customer_sitepackage/Configuration/TypoScript/Extension/News/setup.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:skombase/Configuration/TypoScript/Extension/Form/setup.typoscript" condition="extension.isLoaded('form') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:skombase/Configuration/TypoScript/Extension/News/setup.typoscript">
 
 
 
@@ -64,22 +64,49 @@ config {
   xhtml_cleaning = all
   disablePrefixComment = 1
   headerComment = Development by Sven Kalbhenn (sven@skom.de)
+  skom.1 = skombase
 }
 
 #############################################
 #### overwrite content_animations layout ####
 #############################################
 lib.contentElement {
-  layoutRootPaths.0 = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
-  layoutRootPaths.100 = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+  layoutRootPaths.100 = EXT:skombase/Resources/Private/Layouts/ContentElements/
+  templateRootPaths.100 = EXT:skombase/Resources/Private/Templates/ContentElements/
+  partialRootPaths.100 = EXT:skombase/Resources/Private/Partials/ContentElements/
 }
+
 tt_content {
-  container_1_columns.layoutRootPaths.100. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
-  container_2_columns.layoutRootPaths.100. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
-  container_2_columns_right.layoutRootPaths.100. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
-  container_2_columns_left.layoutRootPaths.100. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
-  container_3_columns.layoutRootPaths.100. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
-  container_4_columns.layoutRootPaths.100. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+  container_1_columns {
+    layoutRootPaths.100 = EXT:skombase/Resources/Private/Layouts/ContentElements/
+    templateRootPaths.100 = EXT:skombase/Resources/Private/Templates/ContentElements/
+    partialRootPaths.100 = EXT:skombase/Resources/Private/Partials/ContentElements/
+  }
+  container_2_columns {
+    layoutRootPaths.100 = EXT:skombase/Resources/Private/Layouts/ContentElements/
+    templateRootPaths.100 = EXT:skombase/Resources/Private/Templates/ContentElements/
+    partialRootPaths.100 = EXT:skombase/Resources/Private/Partials/ContentElements/
+  }
+  container_2_columns_right {
+    layoutRootPaths.100 = EXT:skombase/Resources/Private/Layouts/ContentElements/
+    templateRootPaths.100 = EXT:skombase/Resources/Private/Templates/ContentElements/
+    partialRootPaths.100 = EXT:skombase/Resources/Private/Partials/ContentElements/
+  }
+  container_2_columns_left {
+    layoutRootPaths.100 = EXT:skombase/Resources/Private/Layouts/ContentElements/
+    templateRootPaths.100 = EXT:skombase/Resources/Private/Templates/ContentElements/
+    partialRootPaths.100 = EXT:skombase/Resources/Private/Partials/ContentElements/
+  }
+  container_3_columns {
+    layoutRootPaths.100 = EXT:skombase/Resources/Private/Layouts/ContentElements/
+    templateRootPaths.100 = EXT:skombase/Resources/Private/Templates/ContentElements/
+    partialRootPaths.100 = EXT:skombase/Resources/Private/Partials/ContentElements/
+  }
+  container_4_columns {
+    layoutRootPaths.100 = EXT:skombase/Resources/Private/Layouts/ContentElements/
+    templateRootPaths.100 = EXT:skombase/Resources/Private/Templates/ContentElements/
+    partialRootPaths.100 = EXT:skombase/Resources/Private/Partials/ContentElements/
+  }
 }
 ################
 #### Encore ####
@@ -117,6 +144,20 @@ page {
     popper >
     bootstrap >
     #### Custom Modules
+    app = typo3_encore:app
+    app.forceOnTop = 1
+    photoswipe_core >
+    photoswipe_ui >
+    bootstrap_accordion >
+    bootstrap_popover >
+    bootstrap_stickyheader >
+    bootstrap_smoothscroll >
+    bootstrap_lightbox >
+    bootstrap_navbar >
+  }
+
+  includeJSFooter {
+    skombase_scripts >
     photoswipe_core = EXT:bootstrap_package/Resources/Public/Contrib/photoswipe/photoswipe.min.js
     photoswipe_ui = EXT:bootstrap_package/Resources/Public/Contrib/photoswipe/photoswipe-ui-default.min.js
     bootstrap_accordion = EXT:bootstrap_package/Resources/Public/JavaScript/Dist/bootstrap.accordion.min.js
@@ -125,11 +166,5 @@ page {
     bootstrap_smoothscroll = EXT:bootstrap_package/Resources/Public/JavaScript/Dist/bootstrap.smoothscroll.min.js
     bootstrap_lightbox = EXT:bootstrap_package/Resources/Public/JavaScript/Dist/bootstrap.lightbox.min.js
     bootstrap_navbar = EXT:bootstrap_package/Resources/Public/JavaScript/Dist/bootstrap.navbar.min.js
-    app = typo3_encore:app
-    app.forceOnTop = 1
-  }
-
-  includeJSFooter {
-    customer_sitepackage_scripts >
   }
 }
