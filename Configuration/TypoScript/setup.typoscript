@@ -4,7 +4,7 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:skombase/Configuration/TypoScript/Extension/Form/setup.typoscript" condition="extension.isLoaded('form') == 1">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:skombase/Configuration/TypoScript/Extension/News/setup.typoscript">
-
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:skombase/Configuration/TypoScript/Extension/seo/setup.typoscript">
 
 
 [applicationContext == "Development"]
