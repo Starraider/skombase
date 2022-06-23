@@ -4,6 +4,7 @@ label: Contact Form
 prototypeName: standard
 
 finishers:
+    - identifier: FormToDatabase
     - identifier: EmailToReceiver
       options:
           subject: '{subject}'
