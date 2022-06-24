@@ -8,16 +8,18 @@ TCEFORM {
   tt_content {
     layout {
       altLabels {
-        1 = Wave Bottom 1
-        2 = Wave Bottom 2
-        3 = Wave Bottom 3
+        1 = Schwung weiß oben 1
+        2 = Schwung weiß oben 2
+        3 = Schwung weiß unten 1
       }
       addItems {
-        4 = Line Bottom 1
-        5 = Wave Top 1
-        6 = Book Bottom
+        4 = Schwung weiß unten 2
+        5 = Schwung farbig oben 1
+        6 = Schwung farbig oben 2
+        7 = Schwung farbig unten 1
+        8 = Schwung farbig unten 2
       }
-      removeItems = 8,9,10
+      removeItems = 10
     }
   }
 }
