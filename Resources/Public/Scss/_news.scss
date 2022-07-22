@@ -1,7 +1,11 @@
 .news-list-view {
     .article {
         margin-bottom: 1rem;
-
+        &.news-list-image-top {
+            .news-list-img-wrap {
+                margin-bottom: 0.6rem;
+            }
+        }
         .news-list-info {
             font-size: 0.8rem;
             color: $gray-600;
