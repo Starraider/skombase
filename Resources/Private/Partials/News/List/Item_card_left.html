@@ -7,7 +7,6 @@ Partials/List/Item_card_left.html
 <div class="card news-list-card-left article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}"
     itemscope="itemscope" itemtype="https://schema.org/Article">
     <n:excludeDisplayedNews newsItem="{newsItem}" />
-
     <div class="row g-0 news-list-img-wrap">
         <div class="col-md-4">
             <f:if condition="{newsItem.mediaPreviews}">
