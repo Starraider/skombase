@@ -46,7 +46,7 @@ page {
 ##################
 plugin {
   bootstrap_package {
-    settings{
+    settings {
       overrideParserVariables = 0
     }
     view {

@@ -1,8 +1,10 @@
 <?php
 
-/**
- * Extension Manager/Repository config file for ext "skombase".
+/*
+ * Copyright by Sven Kalbhenn (sven@skom.de).
+ * See LICENSE that was shipped with this package.
  */
+
 $EM_CONF[$_EXTKEY] = [
     'title' => 'SKom Base Sitepackage',
     'description' => 'This is the SKom base sitepackage',
