@@ -1,0 +1,61 @@
+mod {
+  wizards {
+    newContentElement {
+      wizardItems {
+        bausteine {
+          header = Bausteine
+          elements {
+            text_left_image_right {
+              iconIdentifier = content-beside-text-img-right
+              title = Text links Bild rechts
+              description = Text und Bild vordefiniert
+              tt_content_defValues {
+                CType = textpic
+                layout = 1
+                frame_class = default
+                space_before_class = small
+                linkToTop = 0
+                sectionIndex = 0
+                imageorient = 25
+                header_layout = 3
+                header_position = center
+              }
+            }
+            news_umfliessend_links {
+              iconIdentifier = content-news
+              title = News 3 Spalten
+              description = 3 News nebeneinander
+              saveAndClose = true
+              tt_content_defValues {
+                CType = list
+                list_type = news_pi1
+                pi_flexform (
+                  <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+                  <T3FlexForms>
+                      <data>
+                          <sheet index="sDEF">
+                              <language index="lDEF">
+                                  <field index="switchableControllerAction">
+                                      <value index="vDEF">News->list</value>
+                                  </field>
+                              </language>
+                          </sheet>
+                          <sheet index="template">
+                              <language index="lDEF">
+                                  <field index="settings.templateLayout">
+                                      <value index="vDEF">30</value>
+                                  </field>
+                              </language>
+                          </sheet>
+                      </data>
+                  </T3FlexForms>
+                )
+              }
+            }
+          }
+          show = *
+        }
+      }
+    }
+  }
+}
