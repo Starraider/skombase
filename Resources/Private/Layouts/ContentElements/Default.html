@@ -41,6 +41,7 @@
         'none', then: data.space_after_class)}
     </f:variable>
 
+
     <f:if condition="{data.frame_class} != none">
         <f:then>
             <f:variable name="backgroundImageClass">
@@ -51,6 +52,7 @@
             <div id="c{data.uid}"
                 class="customer frame {frameSize} {frameClass} layout-{data.layout} {typeClass} {layoutClass} {backgroundClass} {backgroundImageClass} {spaceBeforeClass} {spaceAfterClass}"
                 {f:if(condition: animationSettings, then: '{animationSettings -> f:format.raw()}' )}>
+                <div class="bg-layout-{data.layout}"></div>
                 <div class="frame-group-container">
                     <div class="frame-group-inner">
                         <f:render partial="Frame/General/BackgroundImage" arguments="{_all}" />
@@ -76,17 +78,7 @@
                         </div>
                     </div>
                 </div>
-                <f:if condition="{data.layout} == 1">
-                    <f:then>
-                        <svg class="layout-svg-top layout-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 203">
-                            <g transform="matrix(1,0,0,1,0,-314)">
-                                <path
-                                    d="M1920,442.4C1920,442.4 1609,213.4 1032,404.4C438.3,601 0,397.4 0,397.4L0,0L1920,0L1920,442.4Z"
-                                    style="fill:white;fill-rule:nonzero;" />
-                            </g>
-                        </svg>
-                    </f:then>
-                </f:if>
+
                 <f:if condition="{data.layout} == 2">
                     <f:then>
                         <svg class="layout-svg-top layout-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 146">
