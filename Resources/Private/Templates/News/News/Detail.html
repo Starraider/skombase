@@ -55,11 +55,11 @@
 
 
             <f:if condition="{settings.templateLayout} == 10">
-                <!-- Layout 10: Carousel rechts -->
+                <!-- Layout 10: Carousel left -->
                 <f:then>
                     <f:render partial="Detail/Item_carousel_left" arguments="{newsItem: newsItem, settings:settings}" />
                 </f:then>
-                <!-- Layout 11: Carousel links -->
+                <!-- Layout 11: Carousel right -->
                 <f:else if="{settings.templateLayout} == 11">
                     <f:render partial="Detail/Item_carousel_right"
                         arguments="{newsItem: newsItem, settings:settings}" />

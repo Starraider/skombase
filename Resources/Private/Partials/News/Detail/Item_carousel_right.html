@@ -13,13 +13,8 @@ Partials/News/Detail/Item_carousel_right.html
     <div class="container-fluid gx-0">
         <div class="row gx-0">
             <div class="col-12 col-md-7 pe-3">
-                <f:if condition="{newsItem.contentElements}">
-                    <!-- content elements -->
-                    <f:cObject typoscriptObjectPath="lib.tx_news.contentElementRendering">
-                        {newsItem.contentElementIdList}</f:cObject>
-                </f:if>
                 <!-- main text -->
-                <div class="news-text-wrap" itemprop="articleBody">
+                <div class="c-news-article__bodytext" itemprop="articleBody">
                     <f:format.html>{newsItem.bodytext}</f:format.html>
                 </div>
             </div>
@@ -27,6 +22,13 @@ Partials/News/Detail/Item_carousel_right.html
                 <!-- media -->
                 <f:render partial="Detail/MediaCarousel"
                     arguments="{media: newsItem.mediaNonPreviews, settings:settings}" />
+                <f:if condition="{newsItem.contentElements}">
+                    <!-- content elements -->
+                    <div class="c-news-article__sidecontent">
+                        <f:cObject typoscriptObjectPath="lib.tx_news.contentElementRendering">
+                            {newsItem.contentElementIdList}</f:cObject>
+                    </div>
+                </f:if>
             </div>
         </div>
     </div>

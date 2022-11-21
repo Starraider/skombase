@@ -1,7 +1,7 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:if condition="{media}">
     <!-- media files -->
-    <div class="news-img-wrap">
+    <div class="c-news-article__carousel-wrap">
         <div class="outer">
             <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -14,17 +14,20 @@
                             <f:render partial="Detail/MediaCarouselImage"
                                 arguments="{mediaElement: mediaElement, settings:settings, iterator:iterator}" />
                         </f:if>
+                        <f:variable name="imgCount" value="{iterator.index}" />
                     </f:for>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                    <f:if condition="{imgCount} > 0">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </f:if>
                 </div>
             </div>
         </div>

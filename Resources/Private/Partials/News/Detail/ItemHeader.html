@@ -4,13 +4,13 @@
 =====================
 Partials/News/Detail/ItemHeader.html
 -->
-<div class="header">
+<div class="c-news-article__title">
     <h1 itemprop="headline">{newsItem.title}</h1>
 </div>
-<div class="news-detail-info">
+<div class="c-news-article__info">
     <p>
         <!-- date -->
-        <span class="news-detail-date">
+        <span class="c-news-article__date">
             <time itemprop="datePublished" datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
                 <f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
             </time>
@@ -22,7 +22,7 @@ Partials/News/Detail/ItemHeader.html
 
         <f:if condition="{newsItem.tags}">
             <!-- Tags -->
-            <span class="news-list-tags" itemprop="keywords">
+            <span class="c-news-article__tags" itemprop="keywords">
                 <f:for each="{newsItem.tags}" as="tag">
                     {tag.title}
                 </f:for>
@@ -31,7 +31,8 @@ Partials/News/Detail/ItemHeader.html
 
         <f:if condition="{newsItem.author}">
             <!-- author -->
-            <span class="news-list-author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+            <span class="c-news-article__author" itemprop="author" itemscope="itemscope"
+                itemtype="http://schema.org/Person">
                 <f:translate key="author_simple" /> <span itemprop="name">{newsItem.author}</span>
             </span>
         </f:if>
@@ -39,7 +40,7 @@ Partials/News/Detail/ItemHeader.html
 </div>
 <f:if condition="{newsItem.teaser}">
     <!-- teaser -->
-    <div class="teaser-text" itemprop="description">
+    <div class="c-news-article__teaser" itemprop="description">
         <f:format.html>{newsItem.teaser}</f:format.html>
     </div>
 </f:if>
