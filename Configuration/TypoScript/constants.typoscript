@@ -16,6 +16,7 @@ page {
   theme {
     googleFont.enable = 0
     cookieconsent.enable = 0
+    language.enable = 0
     copyright.text = &copy; 2022 Sven Kalbhenn
     navigation {
       style = default
