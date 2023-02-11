@@ -2,6 +2,13 @@
 # TCEFORM
 #
 TCEFORM {
+  tt_address{
+    name.label = Firmenname
+    name.disabled = 0
+    email.label = E-Mail
+    room.disabled = 1
+    building.disabled = 1
+  }
   pages {
     newUntil.disabled = 1
     backend_layout.removeItems = -1
