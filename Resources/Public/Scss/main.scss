@@ -1,7 +1,7 @@
 /* Build/styles/main.scss */
 
 // customized Bootstrap variables
-@import "variables";
+@import "abstracts/variables";
 
 // the ~ allows you to reference things in node_modules
 // @import "~bootstrap/scss/bootstrap";
@@ -11,6 +11,9 @@
 // My own Styles
 //
 //@import "bootstrappackageicon";
-@import "2col6633";
-@import "news";
-@import "mystyles";
+@import "layout/2col6633";
+@import "components/navbar";
+@import "components/language-menu";
+@import "components/svg-overlays";
+@import "vendor/klaro";
+@import "plugins/news";
