@@ -117,6 +117,16 @@ plugin.tx_typo3encore {
     manifestJsonPath = EXT:customer_sitepackage/Resources/Public/manifest.json
   }
 }
+###################
+#### Bootstrap ####
+###################
+plugin.tx_bootstrappackage {
+  view {
+    templateRootPaths.5 = EXT:skombase/Resources/Private/Templates/
+    partialRootPaths.5 = EXT:skombase/Resources/Private/Partials/
+    layoutRootPaths.5 = EXT:skombase/Resources/Private/Layouts/
+  }
+}
 
 ##############
 #### PAGE ####

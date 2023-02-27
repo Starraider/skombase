@@ -27,8 +27,11 @@ TCEFORM {
         6 = Schwung farbig oben 2
         7 = Schwung farbig unten 1
         8 = Schwung farbig unten 2
+        9 = Eckig weiß unten
+        10 = Eckig hellgrau unten
+        11 = Eckig dunkelgrau unten
+        12 = Eckig farbig unten
       }
-      removeItems = 10
     }
   }
 }
