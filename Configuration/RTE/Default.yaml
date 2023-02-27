@@ -8,6 +8,16 @@ editor:
     config:
         contentsCss: 'EXT:bootstrap_package/Resources/Public/Css/bootstrap5-rte.min.css'
         stylesSet:
+            - {
+                  name: 'Display 1',
+                  element: 'p',
+                  attributes: { 'class': 'display-1' },
+              }
+            - {
+                  name: 'Display 2',
+                  element: 'p',
+                  attributes: { 'class': 'display-2' },
+              }
             - { name: 'wie h1', element: 'div', attributes: { 'class': 'h1' } }
             - { name: 'wie h2', element: 'div', attributes: { 'class': 'h2' } }
             - { name: 'wie h3', element: 'div', attributes: { 'class': 'h3' } }
@@ -17,7 +27,6 @@ editor:
             - find
             - wordcount
             - autolink
-            - autogrow
             - codesnippet
         codeSnippet_theme: 'obsidian'
         codeSnippet_languages:
