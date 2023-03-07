@@ -12,6 +12,12 @@
             <trans-unit id="backend_layout.column.normal">
                 <source>Normal</source>
             </trans-unit>
+			<trans-unit id="field.background_video">
+                <source>Background-Video</source>
+            </trans-unit>
+			<trans-unit id="field.select_background_video">
+                <source>Add Video</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

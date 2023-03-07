@@ -178,3 +178,14 @@ page {
     // bootstrap_navbar = EXT:bootstrap_package/Resources/Public/JavaScript/Dist/bootstrap.navbar.min.js
   }
 }
+
+ ##########################
+  ### DATA PREPROCESSING ###
+  ##########################
+  dataProcessing {
+      1509274347 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+      1509274347 {
+          references.fieldName = background_video
+          as = backgroundVideo
+      }
+  }
