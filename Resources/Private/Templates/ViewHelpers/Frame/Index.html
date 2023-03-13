@@ -1,7 +1,6 @@
 <f:spaceless>
     <f:if condition="{configuration.displayFrame}">
         <f:then>
-
             <div id="{configuration.id}" class="{classes -> bk2k:implode()}">
                 <div class="frame-group-container">
                     <div class="frame-group-inner">
@@ -21,11 +20,39 @@
 
             <a id="{configuration.id}"></a>
             <f:if condition="{configuration.spaceBefore} !== none">
-                <div class="frame-space-before frame-space-before-{configuration.spaceBefore}"></div>
+                <f:then>
+                    <f:if condition="{configuration.paddingBefore} !== none">
+                        <f:then>
+                            <div class="frame-space-before frame-space-before-{configuration.spaceBefore} frame-padding-before-{configuration.paddingBefore}"></div>
+                        </f:then>
+                        <f:else>
+                            <div class="frame-space-before frame-space-before-{configuration.spaceBefore}"></div>
+                        </f:else>
+                    </f:if>
+                </f:then>
+                <f:else>
+                    <f:if condition="{configuration.paddingBefore} !== none">
+                        <div class="frame-padding-before-{configuration.paddingBefore}"></div>
+                    </f:if>
+                </f:else>
             </f:if>
             {content -> f:format.raw()}
             <f:if condition="{configuration.spaceAfter} !== none">
-                <div class="frame-space-after frame-space-after-{configuration.spaceAfter}"></div>
+                <f:then>
+                    <f:if condition="{configuration.paddingAfter} !== none">
+                        <f:then>
+                            <div class="frame-space-after frame-space-after-{configuration.spaceAfter} frame-padding-after-{configuration.paddingAfter}"></div>
+                        </f:then>
+                        <f:else>
+                            <div class="frame-space-after frame-space-after-{configuration.spaceAfter}"></div>
+                        </f:else>
+                    </f:if>
+                </f:then>
+                <f:else>
+                    <f:if condition="{configuration.paddingAfter} !== none">
+                        <div class="frame-padding-after-{configuration.paddingAfter}"></div>
+                    </f:if>
+                </f:else>
             </f:if>
 
         </f:else>

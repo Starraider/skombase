@@ -22,12 +22,12 @@
             </f:if>
         </f:for>
     </f:if>
-
     <skom:frame id="c{data.uid}" type="{data.CType}" size="default" layout="l{data.layout}"
         frameClass="{data.frame_class}" spaceBefore="{data.space_before_class}" spaceAfter="{data.space_after_class}"
         options="{data.frame_options}" variants="{variants}" backgroundColor="{data.background_color_class}"
         backgroundImage="{backgroundImage.0}" backgroundImageOptions="{data.background_image_options}"
-        backgroundVideo="{data.background_video}">
+        paddingBefore="{data.padding_top}" paddingAfter="{data.padding_bottom}"
+        backgroundVideo="{data.background_video}" >
         <f:if condition="{data._LOCALIZED_UID}"><a id="c{data._LOCALIZED_UID}"></a></f:if>
         <f:render section="Before" optional="true">
             <f:render partial="DropIn/Before/All" arguments="{_all}" />

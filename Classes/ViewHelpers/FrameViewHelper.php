@@ -54,6 +54,8 @@ class FrameViewHelper extends AbstractViewHelper
         $this->registerArgument('variants', 'array', '', false, []);
         $this->registerArgument('backgroundImage', 'mixed', 'image object or src');
         $this->registerArgument('backgroundImageOptions', 'mixed', '');
+        $this->registerArgument('paddingBefore', 'string', '', false, 'none');
+        $this->registerArgument('paddingAfter', 'string', '', false, 'none');
         $this->registerArgument('backgroundVideo', 'mixed', 'media object or src');
     }
 
@@ -70,6 +72,7 @@ class FrameViewHelper extends AbstractViewHelper
         RenderingContextInterface $renderingContext
     ) {
         $configuration = $arguments;
+
         $configuration['type'] = trim((string)$configuration['type']) !== '' ? trim($configuration['type']) : 'default';
         $configuration['frameClass'] = trim((string)$configuration['frameClass']) !== '' ? trim($configuration['frameClass']) : 'default';
         $configuration['size'] = trim((string)$configuration['size']) !== '' ? trim($configuration['size']) : 'default';
@@ -80,7 +83,8 @@ class FrameViewHelper extends AbstractViewHelper
         $configuration['spaceAfter'] = trim((string)$configuration['spaceAfter']) !== '' ? trim($configuration['spaceAfter']) : 'none';
         $configuration['displayFrame'] = $configuration['frameClass'] !== 'none' ? true : false;
         $configuration['variants'] = ImageVariantsUtility::getImageVariants($configuration['variants']);
-
+        $configuration['paddingBefore'] = trim((string)$configuration['paddingBefore']) !== '' ? trim($configuration['paddingBefore']) : 'none';
+        $configuration['paddingAfter'] = trim((string)$configuration['paddingAfter']) !== '' ? trim($configuration['paddingAfter']) : 'none';
         $identifier = $configuration['id'];
 
         $classes = [];
@@ -93,6 +97,8 @@ class FrameViewHelper extends AbstractViewHelper
         $classes[] = 'frame-background-' . $configuration['backgroundColor'];
         $classes[] = 'frame-space-before-' . $configuration['spaceBefore'];
         $classes[] = 'frame-space-after-' . $configuration['spaceAfter'];
+        $classes[] = 'frame-padding-before-' . $configuration['paddingBefore'];
+        $classes[] = 'frame-padding-after-' . $configuration['paddingAfter'];
 
         if (is_string($configuration['options']) || is_array($configuration['options'])) {
             $configuration['options'] = is_array($configuration['options']) ? $configuration['options'] : GeneralUtility::trimExplode(',', (string)$configuration['options']);

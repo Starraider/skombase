@@ -17,39 +17,7 @@ $GLOBALS['TCA']['tt_content']['columns']['background_video'] = [
                 'createNewRelationLinkTitle' => 'LLL:EXT:skombase/Resources/Private/Language/locallang_be.xlf:field.select_background_video'
             ],
             'overrideChildTca' => [
-                'types' => [
-                    \TYPO3\CMS\Core\Resource\File::FILETYPE_UNKNOWN => [
-                        'showitem' => '
-                            --palette--;;filePalette
-                        '
-                    ],
-                    \TYPO3\CMS\Core\Resource\File::FILETYPE_TEXT => [
-                        'showitem' => '
-                            --palette--;;filePalette
-                        '
-                    ],
-                    \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
-                        'showitem' => '
-                            crop,
-                            --palette--;;filePalette
-                        '
-                    ],
-                    \TYPO3\CMS\Core\Resource\File::FILETYPE_AUDIO => [
-                        'showitem' => '
-                            --palette--;;filePalette
-                        '
-                    ],
-                    \TYPO3\CMS\Core\Resource\File::FILETYPE_VIDEO => [
-                        'showitem' => '
-                            --palette--;;filePalette
-                        '
-                    ],
-                    \TYPO3\CMS\Core\Resource\File::FILETYPE_APPLICATION => [
-                        'showitem' => '
-                            --palette--;;filePalette
-                        '
-                    ],
-                ],
+
             ],
             'minitems' => 0,
             'maxitems' => 1,
@@ -58,10 +26,52 @@ $GLOBALS['TCA']['tt_content']['columns']['background_video'] = [
     ),
     'l10n_mode' => 'exclude',
 ];
-$GLOBALS['TCA']['tt_content']['columns']['frame_class']['onChange'] = 'reload';
+
+
+$GLOBALS['TCA']['tt_content']['columns']['padding_top'] = [
+    'exclude' => true,
+    'displayCond' => 'FIELD:frame_class:!=:none',
+    'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.padding_top',
+    'config' => [
+        'type' => 'select',
+        'renderType' => 'selectSingle',
+        'items' => [
+            ['default', 'default'],
+            ['extra-small', 'extra-small'],
+            ['small', 'small'],
+            ['medium', 'medium'],
+            ['large', 'large'],
+            ['extra-large', 'extra-large']
+        ]
+    ],
+    'l10n_mode' => 'exclude',
+];
+$GLOBALS['TCA']['tt_content']['columns']['padding_top']['onChange'] = 'reload';
+$GLOBALS['TCA']['tt_content']['columns']['padding_bottom'] = [
+    'exclude' => true,
+    'displayCond' => 'FIELD:frame_class:!=:none',
+    'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.padding_bottom',
+    'config' => [
+        'type' => 'select',
+        'renderType' => 'selectSingle',
+        'items' => [
+            ['default', 'default'],
+            ['extra-small', 'extra-small'],
+            ['small', 'small'],
+            ['medium', 'medium'],
+            ['large', 'large'],
+            ['extra-large', 'extra-large']
+        ]
+    ],
+    'l10n_mode' => 'exclude',
+];
+$GLOBALS['TCA']['tt_content']['columns']['padding_bottom']['onChange'] = 'reload';
 
 // Add fields to default palettes
 $GLOBALS['TCA']['tt_content']['palettes']['frames']['showitem'] .= '
     --linebreak--,
     background_video,
+    --linebreak--,
+    padding_top,
+    padding_bottom
 ';
