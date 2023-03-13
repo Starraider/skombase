@@ -5,7 +5,7 @@
 Partials/List/Item_card_grid.html
 -->
 <div class="col">
-    <div class="card h-100 news-list-card-left article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}"
+    <div class="card h-100 c-news-list__article article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}"
         itemscope="itemscope" itemtype="https://schema.org/Article">
         <n:excludeDisplayedNews newsItem="{newsItem}" />
 
@@ -15,7 +15,7 @@ Partials/List/Item_card_grid.html
                 <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
                     <f:alias map="{mediaElement: newsItem.mediaPreviews.0}">
                         <f:if condition="{mediaElement.originalResource.type} == 2">
-                            <f:image image="{mediaElement}" class="card-img-top"
+                            <f:image image="{mediaElement}" class="card-img-top c-news-list__image"
                                 title="{mediaElement.originalResource.title}"
                                 alt="{mediaElement.originalResource.alternative}"
                                 loading="{settings.list.media.image.lazyLoading}"
@@ -26,7 +26,7 @@ Partials/List/Item_card_grid.html
                             <f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement}" />
                         </f:if>
                         <f:if condition="{mediaElement.originalResource.type} == 5">
-                            <f:image image="{mediaElement}" class="card-img-top"
+                            <f:image image="{mediaElement}" class="card-img-top c-news-list__image"
                                 title="{mediaElement.originalResource.title}"
                                 alt="{mediaElement.originalResource.alternative}"
                                 loading="{settings.list.media.image.lazyLoading}"

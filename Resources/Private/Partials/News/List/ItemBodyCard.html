@@ -4,17 +4,17 @@
 =====================
 skombase: /Partials/News/List/ItemBodyCard.html
 -->
-<div class="card-body news-list-article-wrap">
+<div class="card-body news-list-article-wrap c-news-list__article-wrap">
     <!-- header -->
-    <h3 class="card-title news-list-headline">
+    <h3 class="card-title news-list-headline c-news-list__headline">
         <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
             <span itemprop="headline">{newsItem.title}</span>
         </n:link>
     </h3>
 
     <!-- date / category -->
-    <p class="card-text news-list-info">
-        <span class="news-list-date">
+    <p class="card-text news-list-info c-news-list__info">
+        <span class="news-list-date c-news-list__date">
             <time itemprop="datePublished" datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
                 <f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
             </time>
@@ -27,7 +27,7 @@ skombase: /Partials/News/List/ItemBodyCard.html
     </p>
 
     <!-- teaser -->
-    <p class="card-text news-list-teaser">
+    <p class="card-text news-list-teaser c-news-list__teaser">
         <n:removeMediaTags>
             <f:if condition="{newsItem.teaser}">
                 <f:then>
@@ -49,7 +49,7 @@ skombase: /Partials/News/List/ItemBodyCard.html
     </p>
 
     <!-- footer information -->
-    <p class="card-text news-list-footer">
+    <p class="card-text news-list-footer c-news-list__morelink">
         <!-- more link -->
         <n:link newsItem="{newsItem}" settings="{settings}" class="news-list-more" title="{newsItem.title}">
             <f:translate key="more-link" />

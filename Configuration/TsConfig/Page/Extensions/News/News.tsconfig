@@ -6,14 +6,17 @@ tx_news.templateLayouts {
     5 = ohne Bild
     6 = Cards links
     7 = Cards right
-    8 = Card Grid
-    9 =  --div--,Detail-View
-    10 = Carousel links
-    11 = Carousel rechts
-    12 = Carousel oben
-    20 = Galerie links
-    21 = Galerie rechts
-    22 = Galerie unten
-    30 = Umfließend links
-    31 = Umfließend rechts
+    8 = One Card
+    9 = Two Cards
+    10 = Three Cards
+    11 = Four Cards
+    12 =  --div--,Detail-View
+    20 = Carousel links
+    21 = Carousel rechts
+    22 = Carousel oben
+    23 = Galerie links
+    24 = Galerie rechts
+    25 = Galerie unten
+    26 = Umfließend links
+    27 = Umfließend rechts
 }

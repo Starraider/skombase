@@ -10,12 +10,12 @@ customer_sitepackage: News/Templates/News/List.html
     <!--TYPO3SEARCH_end-->
     <f:if condition="{news}">
         <f:then>
-            <div class="news-list-view" id="news-container-{contentObjectData.uid}">
+            <div class="news-list-view c-news-list" id="news-container-{contentObjectData.uid}">
                 <f:if condition="{settings.hidePagination}">
                     <f:then>
                         <h3>Templates/News/News</h3>
                         <h3>Layout: {settings.templateLayout}</h3>
-                        <f:if condition="{settings.templateLayout} == 8">
+                        <f:if condition="{settings.templateLayout} == 10">
                             <f:then>
                                 <div class="row row-cols-1 row-cols-md-3 news-list-item">
                                     <f:for each="{news}" as="newsItem" iteration="iterator">
@@ -82,9 +82,39 @@ customer_sitepackage: News/Templates/News/List.html
                                         arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
                                 </f:for>
                             </f:else>
-                            <!-- Layout 8: Card Grid -->
+                            <!-- Layout 8: One Card -->
                             <f:else if="{settings.templateLayout} == 8">
+                                <div class="row row-cols-1 g-4 news-list-item">
+                                    <f:for each="{pagination.paginator.paginatedItems}" as="newsItem"
+                                        iteration="iterator">
+                                        <f:render partial="List/Item_card_grid"
+                                            arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                                    </f:for>
+                                </div>
+                            </f:else>
+                            <!-- Layout 9: Two Card -->
+                            <f:else if="{settings.templateLayout} == 9">
+                                <div class="row row-cols-1 row-cols-md-2 g-4 news-list-item">
+                                    <f:for each="{pagination.paginator.paginatedItems}" as="newsItem"
+                                        iteration="iterator">
+                                        <f:render partial="List/Item_card_grid"
+                                            arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                                    </f:for>
+                                </div>
+                            </f:else>
+                            <!-- Layout 10: Three Cards -->
+                            <f:else if="{settings.templateLayout} == 10">
                                 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 news-list-item">
+                                    <f:for each="{pagination.paginator.paginatedItems}" as="newsItem"
+                                        iteration="iterator">
+                                        <f:render partial="List/Item_card_grid"
+                                            arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                                    </f:for>
+                                </div>
+                            </f:else>
+                            <!-- Layout 11: Four Cards -->
+                            <f:else if="{settings.templateLayout} == 11">
+                                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 news-list-item">
                                     <f:for each="{pagination.paginator.paginatedItems}" as="newsItem"
                                         iteration="iterator">
                                         <f:render partial="List/Item_card_grid"
