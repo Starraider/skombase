@@ -22,6 +22,12 @@ page {
       style = default
       type = top
     }
+    socialmedia {
+      enable = 1
+      showInMetaMenue = 0
+      showFixedButtons = 1
+      fixedBtnSize = 25
+    }
   }
   logo {
     file = EXT:skombase/Resources/Public/Images/logo.svg
