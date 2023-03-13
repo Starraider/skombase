@@ -57,6 +57,7 @@ class FrameViewHelper extends AbstractViewHelper
         $this->registerArgument('paddingBefore', 'string', '', false, 'none');
         $this->registerArgument('paddingAfter', 'string', '', false, 'none');
         $this->registerArgument('backgroundVideo', 'mixed', 'media object or src');
+        $this->registerArgument('animation', 'string', '', false, '');
     }
 
     /**
@@ -72,7 +73,6 @@ class FrameViewHelper extends AbstractViewHelper
         RenderingContextInterface $renderingContext
     ) {
         $configuration = $arguments;
-
         $configuration['type'] = trim((string)$configuration['type']) !== '' ? trim($configuration['type']) : 'default';
         $configuration['frameClass'] = trim((string)$configuration['frameClass']) !== '' ? trim($configuration['frameClass']) : 'default';
         $configuration['size'] = trim((string)$configuration['size']) !== '' ? trim($configuration['size']) : 'default';

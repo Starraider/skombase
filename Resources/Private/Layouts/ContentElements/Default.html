@@ -27,7 +27,8 @@
         options="{data.frame_options}" variants="{variants}" backgroundColor="{data.background_color_class}"
         backgroundImage="{backgroundImage.0}" backgroundImageOptions="{data.background_image_options}"
         paddingBefore="{data.padding_top}" paddingAfter="{data.padding_bottom}"
-        backgroundVideo="{data.background_video}" >
+        backgroundVideo="{data.background_video}"
+        animation="{f:if(condition: animationSettings, then: '{animationSettings -> f:format.raw()}')}" >
         <f:if condition="{data._LOCALIZED_UID}"><a id="c{data._LOCALIZED_UID}"></a></f:if>
         <f:render section="Before" optional="true">
             <f:render partial="DropIn/Before/All" arguments="{_all}" />
