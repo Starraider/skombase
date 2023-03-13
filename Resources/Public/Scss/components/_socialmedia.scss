@@ -1,0 +1,100 @@
+
+//
+// Socialmedia
+//
+.sociallinks-item-facebook a {
+    color: $color-facebook !important;
+    img {
+        background-color: $color-facebook;
+        padding: 2px;
+    }
+}
+.sociallinks-item-twitter a {
+    color: $color-twitter !important;
+    img {
+        background-color: $color-twitter;
+        padding: 2px;
+    }
+}
+.sociallinks-item-instagram a {
+    color: $color-instagram !important;
+    img {
+        background-color: $color-instagram;
+        padding: 2px;
+    }
+}
+.sociallinks-item-youtube a {
+    color: $color-youtube !important;
+    img {
+        background-color: $color-youtube;
+        padding: 2px;
+    }
+}
+.sociallinks-item-xing a {
+    color: $color-xing !important;
+    img {
+        background-color: $color-xing;
+        padding: 2px;
+    }
+}
+.sociallinks-item-kununu a {
+    color: $color-kununu !important;
+    img {
+        background-color: $color-kununu;
+        padding: 2px;
+    }
+}
+.sociallinks-item-tiktok a {
+    color: $color-tiktok !important;
+    img {
+        background-color: $color-tiktok;
+        padding: 2px;
+    }
+}
+.sociallinks-item-linkedin a {
+    color: $color-linkedin !important;
+    img {
+        background-color: $color-linkedin;
+        padding: 2px;
+    }
+}
+
+//
+// Social-Buttons
+//
+#SocialMediaButtons {
+    visibility: hidden;
+    @include media-breakpoint-up(sm) {
+        visibility: visible;
+    }
+    width: 50px;
+    top: 135px;
+    @include media-breakpoint-up(md) {
+        width: 40px;
+        top: 165px;
+    }
+    @include media-breakpoint-up(lg) {
+        top: 206px;
+    }
+    position: fixed;
+    right: 0;
+    border: none;
+    background-color: $socialMediaBtn-bg;
+    z-index: 999999;
+    padding-top: 5px;
+    .sociallinks-list {
+        padding: 0;
+        margin: 0;
+        li {
+            padding: 5px 0 0 15px;
+            @include media-breakpoint-up(md) {
+                padding: 0 0 0 10px;
+            }
+            margin: 0;
+            img {
+                background-color: transparent;
+                padding: 0;
+            }
+        }
+    }
+}
