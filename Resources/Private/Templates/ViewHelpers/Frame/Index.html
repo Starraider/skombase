@@ -2,8 +2,14 @@
     <f:if condition="{configuration.displayFrame}">
         <f:then>
             <div id="{configuration.id}" class="{classes -> bk2k:implode()}" {f:if(condition: configuration.animation, then: '{configuration.animation -> f:format.raw()}')} >
+                <f:if condition="{configuration.bgVideo} != 'none'">
+                    <video class="video-bg" autoplay muted loop>
+                        <source src="/fileadmin{configuration.bgVideo}" type="{configuration.bgVideoMimeType}">
+                    </video>
+                </f:if>
                 <div class="frame-group-container">
                     <div class="frame-group-inner">
+
                         <f:render partial="Frame/BackgroundImage" arguments="{_all}" />
                         <div class="frame-container frame-container-default">
                             <div class="frame-inner">

@@ -179,13 +179,16 @@ page {
   }
 }
 
- ##########################
-  ### DATA PREPROCESSING ###
-  ##########################
+##########################
+### DATA PREPROCESSING ###
+##########################
+lib.contentElement {
   dataProcessing {
-      1509274347 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-      1509274347 {
-          references.fieldName = background_video
-          as = backgroundVideo
-      }
+    202303150926 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+    202303150926 {
+      as = bgvideo
+      references.fieldName = background_video
+      references.table = tt_content
+    }
   }
+}

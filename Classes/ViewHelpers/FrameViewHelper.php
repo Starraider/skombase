@@ -56,7 +56,8 @@ class FrameViewHelper extends AbstractViewHelper
         $this->registerArgument('backgroundImageOptions', 'mixed', '');
         $this->registerArgument('paddingBefore', 'string', '', false, 'none');
         $this->registerArgument('paddingAfter', 'string', '', false, 'none');
-        $this->registerArgument('backgroundVideo', 'mixed', 'media object or src');
+        $this->registerArgument('bgVideo', 'string', '', false, 'none');
+        $this->registerArgument('bgVideoMimeType', 'string', '', false, 'none');
         $this->registerArgument('animation', 'string', '', false, '');
     }
 
@@ -85,6 +86,9 @@ class FrameViewHelper extends AbstractViewHelper
         $configuration['variants'] = ImageVariantsUtility::getImageVariants($configuration['variants']);
         $configuration['paddingBefore'] = trim((string)$configuration['paddingBefore']) !== '' ? trim($configuration['paddingBefore']) : 'none';
         $configuration['paddingAfter'] = trim((string)$configuration['paddingAfter']) !== '' ? trim($configuration['paddingAfter']) : 'none';
+        $configuration['bgVideo'] = trim((string)$configuration['bgVideo']) !== '' ? trim($configuration['bgVideo']) : 'none';
+        $configuration['bgVideoMimeType'] = trim((string)$configuration['bgVideoMimeType']) !== '' ? trim($configuration['bgVideoMimeType']) : 'none';
+
         $identifier = $configuration['id'];
 
         $classes = [];
@@ -152,19 +156,8 @@ class FrameViewHelper extends AbstractViewHelper
         }
 
         // Background-Video
-        $backgroundVideoFile = null;
-        if (is_object($configuration['backgroundVideo']) && ($configuration['backgroundVideo'] instanceof FileReference || $configuration['backgroundVideo'] instanceof File)) {
-            $backgroundVideoFile = $configuration['backgroundVideo'];
-        } elseif (is_string($configuration['backgroundVideo'])) {
-            $backgroundVideoId = $configuration['backgroundVideo'];
-            $resourceFactory = GeneralUtility::makeInstance(ResourceFactory::class);
-            $backgroundVideoAbsFilename = GeneralUtility::getFileAbsFileName($configuration['backgroundVideo']);
-            if (file_exists($backgroundVideoAbsFilename)) {
-                // Do not use absolute file name to ensure correct path resolution from ResourceFactory.
-                $backgroundVideoFile = $resourceFactory->retrieveFileOrFolderObject($configuration['backgroundVideo']);
-            }
-        }
-        if ($backgroundVideoFile !== null) {
+
+        if ($configuration['bgVideo'] !== "none") {
             $classes[] = 'frame-has-backgroundvideo';
         } else {
             $classes[] = 'frame-no-backgroundvideo';
@@ -182,10 +175,6 @@ class FrameViewHelper extends AbstractViewHelper
                     'file' => $backgroundImageFile,
                     'options' => $backgroundImageOptions,
                     'classes' => $backgroundImageClasses,
-                ],
-                'backgroundVideo' => [
-                    'id' => $backgroundVideoId,
-                    'file' => $backgroundVideoFile,
                 ],
                 'variants' => $configuration['variants'],
                 'content' => $renderChildrenClosure()
