@@ -11,7 +11,9 @@
                 'bootstrap_package')}</span>
         </a>
         <f:render partial="Navigation/Main" arguments="{_all}" />
-        <f:render section="Border" optional="true" />
+        <div id="border">
+            <f:render section="Border" optional="true" />
+        </div>
         <f:render partial="Navigation/Breadcrumb" arguments="{_all}" />
 
         <div id="page-content" class="bp-page-content main-section">
